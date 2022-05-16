@@ -5,19 +5,19 @@ import "./index.css";
 const books = [
   {
     id: 1,
-    img: "https://images-na.ssl-images-amazon.com/images/I/51x8pmqjY0L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/81a5KHEkwQL._AC_UL604_SR604,400_.jpg",
     title: "Oh, the Places You'll Go!",
     author: "Dr. Seuss",
   },
   {
     id: 2,
-    img: "https://images-na.ssl-images-amazon.com/images/I/41rzRPDRxJL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/61m1Vxw8tiL._AC_UL604_SR604,400_.jpg",
     title: "Where the Crawdads Sing",
     author: "Delia Owens",
   },
   {
     id: 3,
-    img: "https://images-na.ssl-images-amazon.com/images/I/51-uspgqWIL._SX329_BO1,204,203,200_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL604_SR604,400_.jpg",
     title: "Atomic Habits",
     author: "James Clear",
   },
@@ -33,13 +33,20 @@ function BookList() {
   );
 }
 
-const Book = (props) => {
-  const { img, title, author } = props;
+const Book = ({ img, title, author }) => {
+  // attribute, eventHandler
+  // onClick, onMouseOver
+  const clickHandler = () => {
+    alert("hello world");
+  };
   return (
     <article className="book">
       <img src={img} alt="" />
       <h1>{title}</h1>
       <h4>{author}</h4>
+      <button type="button" onClick={clickHandler}>
+        example
+      </button>
     </article>
   );
 };
